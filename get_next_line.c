@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 15:00:17 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/29 13:03:49 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/12/05 14:28:22 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*int main()
+/* int main()
 {
 	int fd = 0;
 	char *to_free;
@@ -43,4 +43,5 @@ char	*get_next_line(int fd)
 	to_free = get_next_line(fd);
 	printf("%s", to_free);
 	close(fd);
-}*/
+}
+ */

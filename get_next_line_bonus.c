@@ -6,7 +6,7 @@
 /*   By: diomarti <diomarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 20:31:06 by diomarti          #+#    #+#             */
-/*   Updated: 2022/11/30 20:31:06 by diomarti         ###   ########.fr       */
+/*   Updated: 2022/12/05 14:27:45 by diomarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char	*get_next_line(int fd)
 	int			i;
 
 	i = 0;
+	if (fd < 0 || fd > FOPEN_MAX)
+		return (NULL);
 	if (BUFFER_SIZE < 1 || read (fd, 0, 0) < 0 || fd >= FOPEN_MAX)
 	{
-		while (fd >= 0 && fd <= FOPEN_MAX && saved[fd][i])
+		while (saved[fd][i])
 			saved[fd][i++] = 0;
 		return (NULL);
 	}
